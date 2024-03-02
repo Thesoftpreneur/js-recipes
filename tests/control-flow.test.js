@@ -2,6 +2,7 @@ import { describe, test, it, expect } from "vitest";
 import {
   howGreetAtTime_elseIfExample,
   howGreetAtTime_switchCaseExample,
+
 } from "../src/control-flow";
 
 describe.each([
@@ -15,5 +16,15 @@ describe.each([
 
   test(`so we said2 ${expectedGreeting}`, () => {
     expect(howGreetAtTime_switchCaseExample(hour)).toBe(expectedGreeting);
+  });
+});
+
+describe.only("Loop all possibilities with For Loop", () => {
+  it("Te result of switchCase should be eqial to the result of the elseIf", () => {
+    for (let hour = 0; hour <= 24; hour++) {
+      expect(howGreetAtTime_elseIfExample(hour)).toBe(
+        howGreetAtTime_switchCaseExample(hour)
+      );
+    }
   });
 });

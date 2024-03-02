@@ -33,4 +33,11 @@ export function howGreetAtTime_switchCaseExample(hour) {
     default:
       return Greetings.GOOD_EVENING;
   }
+
+  function logAllTimes_forLoopExample() {
+    for(let i = 0; i <= 5; i++) {
+      console.log(
+        "At " + i + " o'clock we say " + howGreetAtTime_elseIfExample(hour));
+    }
+  }
 }
