@@ -1,8 +1,7 @@
 import { describe, test, it, expect } from "vitest";
-import { createCircle } from "../src/objects";
+import { createCircle, Circle } from "../src/objects";
 
 describe("Creating objects", () => {
-
   it("Literal notation", () => {
     let radiusVariable = 1;
     let xVariable = 1;
@@ -38,4 +37,29 @@ describe("Creating objects", () => {
     circle1.draw();
     circle2.draw();
   });
+
+  it("Constructor function", () => {
+    let radius1 = 4;
+    let radius2 = 7;
+
+    const circle1 = new Circle(radius1);
+    const circle2 = new Circle(radius2);
+    expect(circle1.radius).toBe(radius1);
+    expect(circle2.radius).toBe(radius2);
+    circle1.draw();
+    circle2.draw();
+  });
+
+    it("Removing properties", () => {
+      let radius = 4;
+
+      const circle = new Circle(radius);
+      expect(circle.radius).toBe(radius);
+      delete circle.radius;
+      expect(circle).haveOwnProperty("draw");
+      expect(circle).not.haveOwnProperty("radius");
+
+    });
+
+
 });
