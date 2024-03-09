@@ -1,5 +1,6 @@
 import { describe, test, it, expect } from "vitest";
 import {
+  Greetings,
   howGreetAtTime_elseIfExample,
   howGreetAtTime_switchCaseExample,
 } from "../src/control-flow";
@@ -34,6 +35,28 @@ describe("Loop all possibilities with Loops", () => {
         howGreetAtTime_switchCaseExample(hour)
       );
       hour++;
+    }
+  });
+});
+
+describe("Iterating over collections", () => {
+  it("Iterating over properties", () => {
+    for (let key in Greetings) {
+      expect(Greetings).toHaveProperty(key);
+    }
+  });
+
+  it("Iterating over an array", () => {
+    const colors = ["red", "green", "blue"];
+
+    // iterate by index
+    for (let index in colors) {
+      expect(colors).contains(colors[index]);
+    }
+
+    // iterate by elements
+    for (let color of colors) {
+      expect(colors).contains(color);
     }
   });
 });
