@@ -1,7 +1,7 @@
 import { describe, test, it, expect } from "vitest";
 
-describe.only("Adding elements to the array", () => {
-  test.only("should append element using push() function", () => {
+describe("Adding elements to the array", () => {
+  it("should append element using push() function", () => {
     // Arrange
     const numbers = [3, 4];
     const expectedNumbers = [3, 4, 5];

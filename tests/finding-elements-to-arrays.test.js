@@ -1,6 +1,6 @@
 import { describe, test, it, expect } from "vitest";
 
-describe.only("Finding elements to the array", () => {
+describe("Finding elements to the array", () => {
 
   it("should find an primitive element by value", () => {
     // Arrange
