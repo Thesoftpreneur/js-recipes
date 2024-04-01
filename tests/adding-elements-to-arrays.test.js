@@ -9,8 +9,6 @@ describe.only("Adding elements to the array", () => {
     // Act
 
     numbers.push(5);
-    // numbers.unshift(2);
-    // numbers.splice(3, 0, 26, 45)
 
     console.log("Numbers:" + numbers);
 
@@ -25,7 +23,6 @@ describe.only("Adding elements to the array", () => {
 
       // Act
       numbers.unshift(2);
-      // numbers.splice(3, 0, 26, 45)
 
       console.log("Numbers:" + numbers);
 
