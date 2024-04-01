@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "vitest",
-    "exercises:address-object": "node exercises/address-object.js"
+    "exercises:address-object": "node exercises/address-object.js",
+    "exercises:blog-post-object": "node exercises/blog-post-object.js"
   },
   "author": "",
   "license": "ISC",
