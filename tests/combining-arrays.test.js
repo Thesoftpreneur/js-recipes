@@ -15,4 +15,12 @@ describe("Combining arrays", () => {
 
         expect(first.slice(2, 4)).toEqual(expected);
     });
+
+        it("Concatenates with spread operator", () => {
+        const first = [1, 2, 3];
+        const second = [4, 5, 6];
+        const expected = [1, 2, 3, 4, 5, 6];
+
+        expect([...first, ...second]).toEqual(expected);
+    });
 });
