@@ -24,3 +24,24 @@ describe("Combining arrays", () => {
         expect([...first, ...second]).toEqual(expected);
     });
 });
+
+describe("Copy arrays", () => {
+
+    it("using slice method", () => {
+
+        const myArray = [1, 2, 3, 4, 5, 6];
+
+        const myArrayCopy = myArray.slice();
+
+        expect(myArray).toEqual(myArrayCopy);
+    });
+
+    it("using spread opearator", () => {
+
+        const myArray = [1, 2, 3, 4, 5, 6];
+
+        const myArrayCopy = [...myArray];
+
+        expect(myArray).toEqual(myArrayCopy);
+    });
+});
