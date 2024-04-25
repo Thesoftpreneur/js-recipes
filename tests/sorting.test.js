@@ -26,8 +26,8 @@ describe("Orderind", () => {
             { id: 1, name: "Matthew"}
         ];
         expect(myArray.sort((a, b) => {
-            if (a.name < b.name) return 1;
-            if (a.name > b.name) return -1;
+            if (a.name.toUpperCase() < b.name.toUpperCase()) return 1;
+            if (a.name.toUpperCase() > b.name.toUpperCase()) return -1;
             return 0;
         })).toEqual([
             { id: 1, name: "Matthew"},
