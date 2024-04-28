@@ -1,5 +1,5 @@
 import { describe, test, it, expect } from "vitest";
-import { createCircle, Circle } from "../src/objects";
+import { createCircle, Circle, Video, createVideo } from "../src/objects";
 
 describe("Creating objects", () => {
   it("Literal notation", () => {
@@ -50,16 +50,47 @@ describe("Creating objects", () => {
     circle2.draw();
   });
 
-    it("Removing properties", () => {
-      let radius = 4;
+  it("Removing properties", () => {
+    let radius = 4;
 
-      const circle = new Circle(radius);
-      expect(circle.radius).toBe(radius);
-      delete circle.radius;
-      expect(circle).haveOwnProperty("draw");
-      expect(circle).not.haveOwnProperty("radius");
+    const circle = new Circle(radius);
+    expect(circle.radius).toBe(radius);
+    delete circle.radius;
+    expect(circle).haveOwnProperty("draw");
+    expect(circle).not.haveOwnProperty("radius");
 
-    });
+  });
+
+  it("Usint his keyword for iteration using constructor", () => {
+    let title = "Harry Potter";
+
+    const video = new Video(title);
+
+    video.showTags();
+
+    // no assertions
+    // output should be:
+//     The tag of video Harry Potter is a
+//     The tag of video Harry Potter is b
+//     The tag of video Harry Potter is c
+
+  });
+
+    it("Usint his keyword for iteration using factory method", () => {
+    let title = "Harry Potter";
+
+    const video = createVideo(title);
+
+    video.showTags();
+
+    // no assertions
+    // output should be:
+//     The tag of video Harry Potter is d
+//     The tag of video Harry Potter is e
+//     The tag of video Harry Potter is f
+
+  });
+
 
 
 });

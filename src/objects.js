@@ -19,3 +19,25 @@ export function Circle(radius) {
     );
   };
 }
+
+export function Video(title) {
+  this.title = title;
+  this.tags = ['a', 'b', 'c'];
+  this.showTags = function () {
+    this.tags.forEach(element => {
+      console.log("The tag of video " + this.title + " is " + element)
+    });
+  };
+}
+
+export function createVideo(title) {
+  return {
+    title, // short version of "title: title", only if key and value name is the same
+    tags: ['d', 'e', 'f'],
+    showTags() {
+      this.tags.forEach(element => {
+        console.log("The tag of video " + this.title + " is " + element)
+      });
+    }
+  };
+}
