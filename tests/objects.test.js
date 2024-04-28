@@ -1,5 +1,5 @@
 import { describe, test, it, expect } from "vitest";
-import { createCircle, Circle, Video, createVideo } from "../src/objects";
+import { createCircle, Circle, Video, createVideo, } from "../src/objects";
 
 describe("Creating objects", () => {
   it("Literal notation", () => {
@@ -61,7 +61,7 @@ describe("Creating objects", () => {
 
   });
 
-  it("Usint his keyword for iteration using constructor", () => {
+  it("Using 'this' keyword for iteration using constructor", () => {
     let title = "Harry Potter";
 
     const video = new Video(title);
@@ -76,7 +76,7 @@ describe("Creating objects", () => {
 
   });
 
-    it("Usint his keyword for iteration using factory method", () => {
+  it("Using 'this' keyword for iteration using factory method", () => {
     let title = "Harry Potter";
 
     const video = createVideo(title);
@@ -88,6 +88,21 @@ describe("Creating objects", () => {
 //     The tag of video Harry Potter is d
 //     The tag of video Harry Potter is e
 //     The tag of video Harry Potter is f
+
+  });
+
+  it("Using 'this' keyword for iteration using factory method", () => {
+    let title = "Harry Potter";
+
+    const video = createVideo(title);
+
+    video.showTagsAsOtherVideo();
+
+    // no assertions
+    // output should be:
+//     The tag of video Willy Wonka is d
+//     The tag of video Willy Wonka is e
+//     The tag of video Willy Wonka is f
 
   });
 

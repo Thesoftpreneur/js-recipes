@@ -38,6 +38,15 @@ export function createVideo(title) {
       this.tags.forEach(element => {
         console.log("The tag of video " + this.title + " is " + element)
       });
+    },
+    showTagsAsOtherVideo() {
+        this.tags.forEach(
+          function(element) {
+            console.log("The tag of video " + this.title + " is " + element);
+        }, 
+        {title: "Willy Wonka"} // for callback methods we have to pass the "this" keyword, otherwise it would be undefined. 
+        //Replace with "this" in order to have reference to the title field od Video object "Harry Potter"  
+      );
     }
   };
 }
