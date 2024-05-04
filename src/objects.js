@@ -20,6 +20,21 @@ export function Circle(radius) {
   };
 }
 
+export function createPerson() {
+    return {
+    firstName : 'John',
+    lastName : 'Smith',
+    get fullName() {
+      return this.firstName + " " + this.lastName;
+    },
+    set fullName(value) {
+      const parts = value.split(' ');
+      this.firstName = parts[0];
+      this.lastName = parts[1];
+    }
+  }
+}
+
 export function Video(title) {
   this.title = title;
   this.tags = ['a', 'b', 'c'];
