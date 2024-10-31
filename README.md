@@ -7,6 +7,3 @@
 ## running sample exercise
 
 `npm run exercises:address-object`
-
-
-
